@@ -1,0 +1,66 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+pkgload::load_all()
+```
+
+# obtw
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+Oh, by the way: the goal of this package is to offer a set of lightweight tools to simplify data checks in a pipeline.
+
+This package provides two convenience features for working with data transformation pipelines:
+
+- A stack, for pushing the current result and retrieving it for later use
+
+- A validation framework, for reporting multiple failures in a pipeline
+
+
+## Installation
+
+You can install the development version of obtw like so:
+
+``` r
+pak::pak("krlmlr/obtw")
+```
+
+(Follow the [installation instructions](https://pak.r-lib.org/#arrow_down-installation) to install pak.)
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(obtw)
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
